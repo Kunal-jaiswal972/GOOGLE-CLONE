@@ -3,14 +3,14 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import { DarkThemeProvider } from "./contexts/DarkThemeContext";
+import { ThemeProvider } from "./contexts/DarkThemeContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <DarkThemeProvider>
+    <ThemeProvider>
       <Router>
         <App />
       </Router>
-    </DarkThemeProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );

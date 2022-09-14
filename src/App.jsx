@@ -1,24 +1,12 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Form from "./components/Form";
 import Error from "./components/Error";
 import Results from "./components/Results";
 import Footer from "./components/Footer";
-import { DarkThemeContext } from "./contexts/DarkThemeContext";
-import { BsWindowSidebar } from "react-icons/bs";
 
 const App = () => {
-
-   const { darkTheme } = useContext(DarkThemeContext);
-
-  useEffect(() => {
-    if (darkTheme) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkTheme]);
 
   return (
     <Routes>

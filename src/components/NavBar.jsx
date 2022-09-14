@@ -3,10 +3,10 @@ import Avatar from "./Avatar";
 import { CgMenuGridO } from "react-icons/cg";
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { DarkThemeContext } from "../contexts/DarkThemeContext";
+import { ThemeContext } from "../contexts/DarkThemeContext";
 
 const NavBar = () => {
-   const {darkTheme, toogleDarkTheme} = useContext(DarkThemeContext);
+   const { theme, setTheme } = useContext(ThemeContext);
   
   return (
     <div className="flex w-full items-center p-5 text-sm text-gray-700 dark:text-[#d8d8d8]">
@@ -16,8 +16,8 @@ const NavBar = () => {
       </div>
 
       <div className="flex items-center justify-self-end space-x-3 font-[600] mr-5">
-        <button onClick={toogleDarkTheme}>
-          {darkTheme ? <BsFillSunFill /> : <BsFillMoonFill />}
+        <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+          {theme === "dark" ? <BsFillSunFill /> : <BsFillMoonFill />}
         </button>
         <p className="link">GMAIL</p>
         <Link to="/image" className="link">

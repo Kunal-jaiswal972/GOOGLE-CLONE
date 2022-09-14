@@ -1,5 +1,5 @@
-import React, {useContext} from "react";
-import {DarkThemeContext} from "../contexts/DarkThemeContext"
+import React, { useContext } from "react";
+import { ThemeContext } from "../contexts/DarkThemeContext";
 import { NavLink } from "react-router-dom";
 import { FiSearch, FiShoppingCart, FiSettings } from "react-icons/fi";
 import { BsNewspaper } from "react-icons/bs";
@@ -23,14 +23,16 @@ const tools = [
 ];
 
 const HeaderOptions = () => {
-  const { darkTheme, toogleDarkTheme } = useContext(DarkThemeContext);
-
+  const { theme, setTheme } = useContext(ThemeContext);
 
   return (
     <div className="dark:bg-[#202124] dark:text-[#9aa0a6] flex items-center justify-center lg:justify-start">
       <div className="flex items-center space-x-8">
-        <button className="pb-1" onClick={ toogleDarkTheme}>
-          {darkTheme ? <BsFillSunFill /> : <BsFillMoonFill />}
+        <button
+          className="pb-1"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        >
+          {theme == "dark" ? <BsFillSunFill /> : <BsFillMoonFill />}
         </button>
         <div className="flex items-center space-x-6">
           {links.map(({ url, text, Icon }) => (
