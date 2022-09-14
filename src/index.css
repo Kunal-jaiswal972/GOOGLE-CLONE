@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Baloo Bhai 2", cursive;
+  }
+
+  .btn {
+    @apply bg-[#f2f2f2] p-3 rounded-md text-gray-800 font-[400] text-xs hover:ring-[1px] focus:outline-none active:ring-gray-300 cursor-pointer ring-gray-300 hover:shadow-md border-gray-300 dark:bg-[#303134] dark:text-[#f2f2f2];
+  }
+
+  .link {
+    @apply hover:underline cursor-pointer;
+  }
+}
