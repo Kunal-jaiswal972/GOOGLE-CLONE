@@ -245,7 +245,7 @@ Main file of the application which renders all the pages and component as per th
 
 Routes:-<br/>
 
-path="/" -> `HomePage`
+path="/" -> `HomePage`<br/>
 path="/contact" -> `NavBar + Contact`
 
 <!-- CLIENT REGISTER ROUTES -->
@@ -261,21 +261,21 @@ path="/login" -> `Login`
 path="view/:formId" -> `ViewFormApplication`
 
 <!-- CLIENT PROTECTED ROUTES  -->
-path="/client" -> `ProtectedRoutes userRole="user" + SharedLayoutClient`
-index -> `ClientDashboard` 
-path="apply" -> `FormApplication`
+path="/client" -> `ProtectedRoutes userRole="user" + SharedLayoutClient`<br/>
+index -> `ClientDashboard` <br/>
+path="apply" -> `FormApplication`<br/>
 path="pdi" -> `PdiApplicationForm`
 
 <!-- ADMIN PROTECTED ROUTES  -->
-path="/admin" -> `ProtectedRoutes userRole="admin" + SharedLayoutClient`
+path="/admin" -> `ProtectedRoutes userRole="admin" + SharedLayoutClient`<br/>
 index -> `AdminDashboard`
 
 <!-- MENTOR PROTECTED ROUTES -->
-path="/admin" -> `ProtectedRoutes userRole="mentor" + SharedLayoutClient`
+path="/admin" -> `ProtectedRoutes userRole="mentor" + SharedLayoutClient`<br/>
 index -> `MentorDashboard`    
 
 <!-- SUPER-ADMIN PROTEDTED ROUTES -->
-path="/superadmin" -> `ProtectedRoutes userRole="superadmin" + SharedLayoutClient`
+path="/superadmin" -> `ProtectedRoutes userRole="superadmin" + SharedLayoutClient`<br/>
 index -> `SuperAdminDashboard`
 
 <!-- ERROR ROUTE -->
