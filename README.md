@@ -180,7 +180,7 @@ It contains the protected routes of the client, admin, mentor and superadmin.
 
 It contains the component which shows in the Event-participant component indicating the status of the user in the events of the NVCTI with its styles according to the status.
 
-### 2.2.14. Timeline--- 
+### 2.2.14. Timeline---
 
 It is the timeline that appears at the right side of the screen in the event details page.
 
@@ -188,21 +188,124 @@ It is the timeline that appears at the right side of the screen in the event det
 
 It is the application form for the APPLICATION FORM TO ACCESS THE NVCTI LAB.
 
-
-
 ## 2.3. Features---
+
 <<<<<<<<<<<<<<<<<<<<ToDO>>>>>>>>>>>>>>>>>>>>
 
 ## 2.4. Hooks---
 
 There are two React Hooks made:-
-<oi>UseTitle.jsx</oi>
+UseTitle.jsx<br/>
 used for rendering the titles at the top of the page in the browser.
 
-<oi>UseUserState.jsx</oi>
+UseUserState.jsx<br/>
 used for retrieving the status of the user as admin, client, mentor or superadmin.
 
 ### 2.5. Pages---
 
-It contains a six folders for all the user role:-
+It contains a six folders for all the user role and one for the error and other for the home:-
 
+##### Admin
+
+contains admin dashboard and shared layout page.
+
+##### Client
+
+contains client dashboard, form, signup form and shared layout page.
+
+##### Mentor
+
+contains mentor dashboard and shared layout page.
+
+##### Superadmin
+
+contains superadmin dashboard and shared layout page.
+
+##### Error
+
+contains error page if user try to navigate to the non-existing page.
+
+##### Home
+
+contains home page and contact us page and also all the components associated with it.
+
+### 2.6. Utils---
+
+constains hepler function:-<br/>
+
+axios.js -> for fetching data purposes.<br/>
+convertToFormData.js -> for converting object to formdata.<br/>
+dateFormat.js -> for formating date purposes.<br/>
+localstorage.js -> for accessing local storage.<br/>
+userAuthHeaders.js -> for using auth token.<br/>
+
+### 2.7. App.js---
+
+Main file of the application which renders all the pages and component as per the routes declared.<br/>
+
+Routes:-<br/>
+
+path="/" -> `HomePage`
+path="/contact" -> `NavBar + Contact`
+
+<!-- CLIENT REGISTER ROUTES -->
+path="/register" -> `Register`
+
+<!-- EMAIL VERIFY ROUTE -->
+path="/auth/verify-email/:emailToken" -> `VerifyEmail`
+
+<!-- LOGIN ROUTE  -->
+path="/login" -> `Login`
+
+<!-- VIEW APPLICATION ROUTE -->
+path="view/:formId" -> `ViewFormApplication`
+
+<!-- CLIENT PROTECTED ROUTES  -->
+path="/client" -> `ProtectedRoutes userRole="user" + SharedLayoutClient`
+
+            
+             
+            
+            <Route index {<ClientDashboard />} />
+            <Route path="apply" {<FormApplication />} />
+          </Route>
+
+          {/* ADMIN PROTECTED ROUTES */}
+          <Route
+            path="/admin"
+            {
+              <ProtectedRoutes userRole="admin">
+                <SharedLayoutAdmin />
+              </ProtectedRoutes>
+            }
+          >
+            <Route index {<AdminDashboard />} />
+          </Route>
+
+          {/* MENTOR PROTECTED ROUTES */}
+          <Route
+            path="/mentor"
+            {
+              <ProtectedRoutes userRole="mentor">
+                <SharedLayoutMentor />
+              </ProtectedRoutes>
+            }
+          >
+            <Route index {<MentorDashboard />} />
+          </Route>
+
+          {/* SUPER-ADMIN PROTEDTED ROUTES */}
+          <Route
+            path="/superadmin"
+            {
+              <ProtectedRoutes userRole="superAdmin">
+                <SharedLayoutSuperAdmin />
+              </ProtectedRoutes>
+            }
+          >
+            <Route index {<SuperAdminDashboard />} />
+          </Route>
+
+          {/* ERROR ROUTE */}
+          <Route path="ptani" {<PdiApplicationForm/>}></Route>
+          <Route exact path="*" {<Error />}></Route>
