@@ -117,73 +117,80 @@ It contains all the files ---
 2.9. index.js---<br/>
 2.10. store.js---<br/>
 
-## assests---
+## 2.1. assests---
 
 It contains all the images used in the website in png format.
 
-## components---
+## 2.2. components---
 
 It contains all the components used in the React App.
 
 Folder structure | components.jsx(component) and styles.jsx(its styles)
 
-### Account-popover---
+### 2.2.1. Account-popover---
 
 It is the popover appears on the screen when user clicks on the profile-pic button on the navbar.
 
-### Dashboard-navbar---
+### 2.2.2. Dashboard-navbar---
 
 There are 4 dashboard navbar for each of the admin , client , mentor and superadmin.
 
-### Event-participant---
+### 2.2.3. Event-participant---
 
 It fetches all the users from the database who are participating in a event, and displays it in the dashboard.
 
-### Footer---###
+### 2.2.4. Footer---###
 
 It is bottom of the page containing two icons:- one of the IIT(ISM) and other of the NVCTI with links of all the social media handles of the NVCTI.
 
-### Loader---
+### 2.2.5. Loader---
 
 It is the loader appears on the screen when app is trying to load the data.
 
-### Login---
+### 2.2.6. Login---
 
 It contains login form of the website.
 
-### Register---
+### 2.2.7. Register---
 
 It contains signup form of the website.
 
-### Logo---
+### 2.2.8. Logo---
 
 It contains logo of the website and its style.
 
-### Notification-dropdown---
+### 2.2.9. Notification-dropdown---
 
 When user clicks on the notification icon at the top-right of the navbar, a dropdown menu appears containing all the notifications.
 
-### Pdi-form---
+### 2.2.10. Pdi-form---
 
 It contains form of the _NVCTI PDI PORTAL_ as accordance to the
 word document provided.
 
-### Previous-status-table---
+### 2.2.11. Previous-status-table---
 
 It contains the previous statuses of the user in the events of the nvcti - "rejcted" or "accepted" or "pending" states.
 
-### Protected-routes---
+### 2.2.12. Protected-routes---
 
 It contains the protected routes of the client, admin, mentor and superadmin.
 
-### Status-pill---
+### 2.2.13. Status-pill---
 
 It contains the component which shows in the Event-participant component indicating the status of the user in the events of the NVCTI with its styles according to the status.
 
-### Timeline--- 
+### 2.2.14. Timeline--- 
 
 It is the timeline that appears at the right side of the screen in the event details page.
 
-### View-form---
+### 2.2.15. View-form---
 
 It is the application form for the APPLICATION FORM TO ACCESS THE NVCTI LAB.
+
+
+
+## Features---
+<<<<<<<<<<<<<<<<<<<<ToDO>>>>>>>>>>>>>>>>>>>>
+
+
