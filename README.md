@@ -92,9 +92,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 This is documentation for frontend of the NVCTI website hosted at [https://localhost:3000].
 
-The project uses Material-ui as CSS framework and styled components .
-The project uses Material-ui as icons library.
-The project uses React-redux for state management.
+The project uses Material-ui as CSS framework and styled components.<br/>
+The project uses Material-ui as icons library.<br/>
+The project uses React-redux for state management.<br/>
 
 In the client folder of the project there are several folders---
 
@@ -125,7 +125,7 @@ It contains all the images used in the website in png format.
 
 It contains all the components used in the React App.
 
-Folder structure | components.jsx(component) and styles.jsx(its styles)
+###### Folder structure | components.jsx(component) and styles.jsx(its styles)
 
 ### 2.2.1. Account-popover---
 
@@ -190,7 +190,19 @@ It is the application form for the APPLICATION FORM TO ACCESS THE NVCTI LAB.
 
 
 
-## Features---
+## 2.3. Features---
 <<<<<<<<<<<<<<<<<<<<ToDO>>>>>>>>>>>>>>>>>>>>
 
+## 2.4. Hooks---
+
+There are two React Hooks made:-
+<oi>UseTitle.jsx</oi>
+used for rendering the titles at the top of the page in the browser.
+
+<oi>UseUserState.jsx</oi>
+used for retrieving the status of the user as admin, client, mentor or superadmin.
+
+### 2.5. Pages---
+
+It contains a six folders for all the user role:-
 
