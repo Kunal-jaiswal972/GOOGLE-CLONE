@@ -262,50 +262,21 @@ path="view/:formId" -> `ViewFormApplication`
 
 <!-- CLIENT PROTECTED ROUTES  -->
 path="/client" -> `ProtectedRoutes userRole="user" + SharedLayoutClient`
+index -> `ClientDashboard` 
+path="apply" -> `FormApplication`
+path="pdi" -> `PdiApplicationForm`
 
-            
-             
-            
-            <Route index {<ClientDashboard />} />
-            <Route path="apply" {<FormApplication />} />
-          </Route>
+<!-- ADMIN PROTECTED ROUTES  -->
+path="/admin" -> `ProtectedRoutes userRole="admin" + SharedLayoutClient`
+index -> `AdminDashboard`
 
-          {/* ADMIN PROTECTED ROUTES */}
-          <Route
-            path="/admin"
-            {
-              <ProtectedRoutes userRole="admin">
-                <SharedLayoutAdmin />
-              </ProtectedRoutes>
-            }
-          >
-            <Route index {<AdminDashboard />} />
-          </Route>
+<!-- MENTOR PROTECTED ROUTES -->
+path="/admin" -> `ProtectedRoutes userRole="mentor" + SharedLayoutClient`
+index -> `MentorDashboard`    
 
-          {/* MENTOR PROTECTED ROUTES */}
-          <Route
-            path="/mentor"
-            {
-              <ProtectedRoutes userRole="mentor">
-                <SharedLayoutMentor />
-              </ProtectedRoutes>
-            }
-          >
-            <Route index {<MentorDashboard />} />
-          </Route>
+<!-- SUPER-ADMIN PROTEDTED ROUTES -->
+path="/superadmin" -> `ProtectedRoutes userRole="superadmin" + SharedLayoutClient`
+index -> `SuperAdminDashboard`
 
-          {/* SUPER-ADMIN PROTEDTED ROUTES */}
-          <Route
-            path="/superadmin"
-            {
-              <ProtectedRoutes userRole="superAdmin">
-                <SharedLayoutSuperAdmin />
-              </ProtectedRoutes>
-            }
-          >
-            <Route index {<SuperAdminDashboard />} />
-          </Route>
-
-          {/* ERROR ROUTE */}
-          <Route path="ptani" {<PdiApplicationForm/>}></Route>
-          <Route exact path="*" {<Error />}></Route>
+<!-- ERROR ROUTE -->
+path="*" -> `Error`
