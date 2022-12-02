@@ -106,16 +106,16 @@ constaining fav icon and manifest files
 
 It contains all the files ---
 
-2.1. assests---
-2.2. components---
-2.3. features---
-2.4. hook---
-2.5. pages---
-2.6. utils---
-2.7. App.js---
-2.8. index.css---
-2.9. index.js---
-2.10. store.js---
+2.1. assests---<br/>
+2.2. components---<br/>
+2.3. features---<br/>
+2.4. hook---<br/>
+2.5. pages---<br/>
+2.6. utils---<br/>
+2.7. App.js---<br/>
+2.8. index.css---<br/>
+2.9. index.js---<br/>
+2.10. store.js---<br/>
 
 ## assests---
 
